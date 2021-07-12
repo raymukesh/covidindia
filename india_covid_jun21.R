@@ -29,7 +29,7 @@ india  %>% group_by(State) %>% mutate(newCases = Confirmed - lag(Confirmed, defa
   ggplot(aes(x = as.Date(Date), y= positive, fill = State)) + geom_area() + geom_line(aes(color=State)) +
   scale_x_date(date_labels = "%b %y", date_breaks = "2 month") +
   facet_wrap(facets = ~reorder(State, -positive), ncol = 6) + 
-  labs(title = "COVID 19 - Positivity Rate of Indian States", subtitle = "(Data till 30-04-2021)", caption = "Data: covid19india.org | Compiled by: Mukesh Ray") +
+  labs(title = "COVID 19 - Positivity Rate of Indian States", subtitle = "(Data till 30-06-2021)", caption = "Data: covid19india.org | Compiled by: Mukesh Ray") +
   xlab("\nDate") + ylab("Positivity Rate (%)\n") +
   theme_minimal(base_size=12, base_family="Roboto") + 
   theme(plot.title = element_text(size=27, family = "Futura Md BT", face = "bold"),
@@ -52,7 +52,7 @@ india  %>% group_by(State) %>% mutate(newCases = Confirmed - lag(Confirmed, defa
   ggplot(aes(x = as.Date(Date), y= newDeaths, fill= State)) + geom_area() + geom_line(aes(color=State)) +
   scale_x_date(date_labels = "%b %y", date_breaks = "2 month") +
   facet_wrap(facets = ~reorder(State, -newCases), scale = "free_y", ncol = 6) + 
-  labs(title = "COVID 19 - Positivity Rate of Indian States", subtitle = "(Data till 30-04-2021)", caption = "Data: covid19india.org | Compiled by: Mukesh Ray") +
+  labs(title = "COVID 19 - Positivity Rate of Indian States", subtitle = "(Data till 30-06-2021)", caption = "Data: covid19india.org | Compiled by: Mukesh Ray") +
   xlab("\nDate") + ylab("Positivity Rate (%)\n") +
   theme_minimal(base_size=12, base_family="Roboto") + 
   theme(plot.title = element_text(size=27, family = "Futura Md BT", face = "bold"),
